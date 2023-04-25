@@ -51,5 +51,7 @@ print(t)
 
 # save the tensor to a file
 
-torch.save(t, 'ambulance_tensor4.pt')
+torch.save(t, 'ambulance_tensor5.pt')
+array = t.numpy()
+np.savetxt("firetrucks.csv", array, delimiter=",")
 

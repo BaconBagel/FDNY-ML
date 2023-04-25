@@ -4,8 +4,8 @@ import pandas as pd
 ambulance_data = pd.read_csv('dispatch_data.csv', chunksize=1000)
 
 # filter the data for February 2021 only and concatenate the chunks
-start_date = '2021-02-01'
-end_date = '2021-03-01'
+start_date = '2020-04-01'
+end_date = '2020-11-01'
 feb_2021_data_chunks = []
 for chunk in ambulance_data:
     print(chunk)
@@ -21,4 +21,4 @@ for chunk in ambulance_data:
 feb_2021_data = pd.concat(feb_2021_data_chunks)
 
 # save the filtered data to a new csv file
-feb_2021_data.to_csv('feb_2021_ambulance_data.csv', index=False)
+feb_2021_data.to_csv('2020_only_ firetruck_data.csv', index=False)

@@ -35,7 +35,7 @@ for epoch in range(num_epochs):
         data = abs(data.float())
         input_data = abs(data[i, :-1])
         target = data[i + 1, 1:3]
- 
+
 
         # Calculate Manhattan distance
         distance = torch.abs(target - input_data[1:3]).sum()
